@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a742af9858a2e758952af8e051ddc56d",
+    "content-hash": "6fa5bbe9d5ce4bc76d29357f67afaab7",
     "packages": [
         {
             "name": "guzzlehttp/psr7",
@@ -140,6 +140,58 @@
                 "watermark"
             ],
             "time": "2017-07-03T15:50:40+00:00"
+        },
+        {
+            "name": "mikealmond/color",
+            "version": "v0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikealmond/color.git",
+                "reference": "79b631575b5f6e43be56b633f900c370feb3cd92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikealmond/color/zipball/79b631575b5f6e43be56b633f900c370feb3cd92",
+                "reference": "79b631575b5f6e43be56b633f900c370feb3cd92",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.5|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MikeAlmond\\Color\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Almond",
+                    "email": "mike.almond@gmail.com",
+                    "homepage": "https://mikealmond.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A small library to manipulate and display colors",
+            "homepage": "https://github.com/mikealmond/color",
+            "keywords": [
+                "color",
+                "mikealmond"
+            ],
+            "time": "2017-03-22T16:32:53+00:00"
         },
         {
             "name": "pimple/pimple",

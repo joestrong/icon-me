@@ -2,7 +2,8 @@
     "require": {
         "silex/silex": "^2.2",
         "twig/twig": "^2.4",
-        "intervention/image": "^2.4"
+        "intervention/image": "^2.4",
+        "mikealmond/color": "^0.0.4"
     },
     "autoload": {
         "psr-4": {

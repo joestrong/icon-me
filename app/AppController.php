@@ -9,7 +9,6 @@ class AppController
     public function __construct(Application $app)
     {
         $this->app = $app;
-        $this->icon = new Icon();
     }
 
     public function index()
@@ -19,12 +18,15 @@ class AppController
     
     public function api()
     {
+        $icon = new Icon();
+        $icon->randomise();
+
         $manager = new ImageManager();
-        $img = $manager->canvas(512, 512, '#ffaaaa');
-        $img->text($this->icon->randomIcon(), 216, 256, function ($font) {
-            $font->file(__DIR__ . '/../resources/fonts/MaterialIcons-Regular.ttf');
-            $font->size(500);
-            $font->color('#ffffff');
+        $img = $manager->canvas(512, 512, $icon->getBackgroundColour());
+        $img->text($icon->getIcon(), 216, 256, function ($font) use ($icon) {
+            $font->file($icon->getFontPath());
+            $font->size($icon->getFontSize());
+            $font->color($icon->getFontColour());
             $font->align('center');
             $font->valign('center');
         });
