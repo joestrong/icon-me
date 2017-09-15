@@ -1,17 +1,17 @@
-logo-me:
-  container_name: logo-me
-  build: ./docker/logo-me
+icon.me:
+  container_name: icon.me
+  build: ./docker/icon.me
   volumes_from:
    - data
   links:
    - php
 php:
-  container_name: logo-me-php
+  container_name: icon.me-php
   build: ./docker/php
   volumes_from:
    - data
 data:
-  container_name: logo-me-data
+  container_name: icon.me-data
   image: debian:jessie
   volumes:
   - /web
