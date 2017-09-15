@@ -1,6 +1,5 @@
 <?php namespace App;
 
-use Intervention\Image\Image;
 use Intervention\Image\ImageManager;
 use Silex\Application;
 
@@ -10,6 +9,7 @@ class AppController
     public function __construct(Application $app)
     {
         $this->app = $app;
+        $this->icon = new Icon();
     }
 
     public function index()
@@ -21,7 +21,7 @@ class AppController
     {
         $manager = new ImageManager();
         $img = $manager->canvas(512, 512, '#ffaaaa');
-        $img->text('&#xE87C;', 216, 256, function ($font) {
+        $img->text($this->icon->randomIcon(), 216, 256, function ($font) {
             $font->file(__DIR__ . '/../resources/fonts/MaterialIcons-Regular.ttf');
             $font->size(500);
             $font->color('#ffffff');
